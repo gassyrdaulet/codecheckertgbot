@@ -72,7 +72,10 @@ const start = async () => {
     }
 
     if (text === "/info" && !msg.reply_to_message) {
-      `1. Как зарегистрироваться в CodeChecker?
+      await bot.sendMessage(
+        chatId,
+
+        `1. Как зарегистрироваться в CodeChecker?
 
       1) Скачайте приложение (пока доступно только для Android);
   https://play.google.com/store/apps/details?id=com.gassyrdaulet.codechecker
@@ -119,7 +122,8 @@ const start = async () => {
   6. Как купить премиум доступ к CodeChecker?
 
     1) Очень просто. Зайдите в приложении:
- "Мой Магазин -> Купить Premium".`;
+ "Мой Магазин -> Купить Premium".`
+      );
     }
   });
 
